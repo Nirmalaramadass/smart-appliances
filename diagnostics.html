@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Pro - Smart Diagnostics Center</title>
+    <meta name="description" content="Diagnose your appliance issues with our smart diagnostic tools. Error code search, troubleshooting guides, and repair recommendations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            green: '#16a34a',
+                            orange: '#f97316',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar will be injected by navbar.js -->
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-600 to-cyan-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Smart Diagnostics Center</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Enter your error code or describe your appliance issue to get instant troubleshooting guidance and repair recommendations.</p>
+            
+            <!-- Main Search -->
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="diagnostic-search" placeholder="Enter error code (e.g., E01, F3) or describe the issue..." class="w-full px-6 py-5 rounded-xl border-0 text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30">
+                    <button id="search-btn" class="absolute right-2 top-2 px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Diagnose
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Error Codes -->
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm cursor-pointer hover:bg-white/30 transition-colors">E01 - Cooling Error</span>
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm cursor-pointer hover:bg-white/30 transition-colors">F3 - Sensor Fault</span>
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm cursor-pointer hover:bg-white/30 transition-colors">H4 - Heating Issue</span>
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm cursor-pointer hover:bg-white/30 transition-colors">LE - Door Lock</span>
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm cursor-pointer hover:bg-white/30 transition-colors">dE - Door Error</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appliance Selection -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8 text-center">Select Your Appliance Type</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="refrigerator">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Refrigerator</span>
+                </div>
+                
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="washing">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Washing Machine</span>
+                </div>
+                
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="ac">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Air Conditioner</span>
+                </div>
+                
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="tv">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Smart TV</span>
+                </div>
+                
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="microwave">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Microwave</span>
+                </div>
+                
+                <div class="appliance-type cursor-pointer text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors border-2 border-transparent hover:border-blue-500" data-type="dishwasher">
+                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-medium">Dishwasher</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Issues Database -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Database</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Common Issues Database</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Browse our comprehensive database of common appliance issues and their solutions.</p>
+            </div>
+            
+            <div class="space-y-4" id="issues-database">
+                <!-- Issue Card 1 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="cooling">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Refrigerator Not Cooling</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: E01, E02, E03</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Common causes include dirty condenser coils, faulty thermostat, or compressor issues. Check the following:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Clean condenser coils behind the refrigerator</li>
+                            <li>Check temperature settings (should be 37-40°F)</li>
+                            <li>Ensure door seals are tight and clean</li>
+                            <li>Listen for compressor operation sounds</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+
+                <!-- Issue Card 2 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="washing">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Washing Machine Not Draining</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: F21, E21, dE</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Usually caused by clogged drain hose, pump filter, or faulty drain pump. Try these steps:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Check and clean the drain pump filter</li>
+                            <li>Inspect drain hose for kinks or clogs</li>
+                            <li>Run a cleaning cycle with vinegar</li>
+                            <li>Check if the drain pump is operating</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+
+                <!-- Issue Card 3 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="ac">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">AC Not Cooling Properly</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: E1, E4, H4</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Low refrigerant, dirty filters, or compressor issues can cause poor cooling. Check these:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Clean or replace air filters regularly</li>
+                            <li>Check outdoor unit for debris</li>
+                            <li>Ensure thermostat is set correctly</li>
+                            <li>Listen for unusual sounds from the unit</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+
+                <!-- Issue Card 4 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="tv">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">TV Screen Black But Sound Works</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: No display, backlight failure</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Backlight failure or T-con board issues are common causes. Try these troubleshooting steps:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Shine a flashlight on the screen to check for faint image</li>
+                            <li>Check all cable connections</li>
+                            <li>Try a different input source</li>
+                            <li>Power cycle the TV (unplug for 60 seconds)</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+
+                <!-- Issue Card 5 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="microwave">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Microwave Not Heating</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: F3, F4, H98</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Magnetron failure, high voltage diode, or capacitor issues can cause no heating. Safety first:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Ensure the door closes properly</li>
+                            <li>Check that the turntable rotates</li>
+                            <li>Listen for normal operation sounds</li>
+                            <li>⚠️ High voltage components - professional repair recommended</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+
+                <!-- Issue Card 6 -->
+                <div class="issue-card glass-card p-6 cursor-pointer" data-issue="dishwasher">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Dishwasher Not Cleaning Dishes</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Error codes: E1, E2, E3</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                    <div class="issue-details hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Clogged spray arms, dirty filters, or water supply issues can cause poor cleaning. Check these:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                            <li>Clean the spray arms and remove debris</li>
+                            <li>Check and clean the filter</li>
+                            <li>Ensure proper water temperature (120°F)</li>
+                            <li>Use the correct amount of detergent</li>
+                        </ul>
+                        <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Repair Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting Guides -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Guides</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Video Troubleshooting Guides</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Watch step-by-step video tutorials to help diagnose and fix common appliance issues.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card overflow-hidden">
+                    <div class="relative h-48 bg-gray-200 dark:bg-gray-700">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="Refrigerator Guide" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Refrigerator Troubleshooting</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Complete guide to diagnosing and fixing common refrigerator problems.</p>
+                        <span class="text-blue-600 dark:text-blue-400 font-medium text-sm">12:45 min</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card overflow-hidden">
+                    <div class="relative h-48 bg-gray-200 dark:bg-gray-700">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Washing Machine Guide" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Washing Machine Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Step-by-step instructions for fixing washing machine drainage issues.</p>
+                        <span class="text-blue-600 dark:text-blue-400 font-medium text-sm">15:30 min</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card overflow-hidden">
+                    <div class="relative h-48 bg-gray-200 dark:bg-gray-700">
+                        <img src="https://hvacproflorida.com/wp-content/uploads/2023/08/AC-Maintenance-The-Homeowners-Guide-to-Long-lasting-Comfort-in-New-Port-RicheyFL.jpg" alt="AC Guide" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-white transition-colors">
+                                <svg class="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">AC Maintenance Guide</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Learn how to maintain your air conditioner for optimal performance.</p>
+                        <span class="text-blue-600 dark:text-blue-400 font-medium text-sm">10:15 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-500">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
+            <p class="text-white/90 mb-8">Our certified technicians are ready to diagnose and repair your appliance issues.</p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Book a Technician
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by footer.js -->
+    
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Issue Card Toggle
+        const issueCards = document.querySelectorAll('.issue-card');
+        
+        issueCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const details = card.querySelector('.issue-details');
+                details.classList.toggle('hidden');
+                
+                const arrow = card.querySelector('svg:last-of-type');
+                arrow.style.transform = details.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(90deg)';
+                arrow.style.transition = 'transform 0.3s ease';
+            });
+        });
+
+        // Appliance Type Selection
+        const applianceTypes = document.querySelectorAll('.appliance-type');
+        
+        applianceTypes.forEach(type => {
+            type.addEventListener('click', () => {
+                applianceTypes.forEach(t => {
+                    t.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/30');
+                    t.classList.add('border-transparent');
+                });
+                
+                type.classList.add('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/30');
+                type.classList.remove('border-transparent');
+                
+                const selectedType = type.getAttribute('data-type');
+                document.getElementById('diagnostic-search').value = selectedType + ' issue';
+                document.getElementById('diagnostic-search').focus();
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('diagnostic-search');
+        const searchBtn = document.getElementById('search-btn');
+        
+        const performSearch = () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            issueCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const errorCodes = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || errorCodes.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('animate-fade-in');
+                }
+            });
+        };
+        
+        if (searchBtn) {
+            searchBtn.addEventListener('click', performSearch);
+        }
+        
+        if (searchInput) {
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

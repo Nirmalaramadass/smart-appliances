@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Pro - Appliance Repair Services</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Comprehensive appliance repair services for all major brands. Refrigerator, washing machine, AC, TV, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            green: '#16a34a',
+                            orange: '#f97316',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar will be injected by navbar.js -->
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-600 to-cyan-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Our Repair Services</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Expert repair services for all major appliance brands with certified technicians and guaranteed satisfaction.</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="service-search" placeholder="Search for a service..." class="w-full px-6 py-4 rounded-xl border-0 text-gray-900 focus:outline-none focus:ring-4 focus:ring-white/30">
+                    <button class="absolute right-2 top-2 px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition-all" data-filter="all">All Services</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="kitchen">Kitchen</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="laundry">Laundry</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="cooling">Cooling</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="electronics">Electronics</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="small">Small Appliances</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="services-grid">
+                
+                <!-- Refrigerator Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="Refrigerator Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full">Popular</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Refrigerator Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cooling issues, ice maker problems, compressor repair, thermostat replacement</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $89</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Washing Machine Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="laundry">
+                    <div class="relative h-48">
+                        <img src="https://www.qualityac.com/wp-content/uploads/2017/05/residential-ac-repair-florida.jpg" alt="Washing Machine Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full">Popular</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Washing Machine Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Drainage problems, motor repair</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $79</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Air Conditioner Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="cooling">
+                    <div class="relative h-48">
+                        <img src="https://www.airconpros.co.za/wp-content/uploads/airconditioner-repairing-experts-1-1.jpg" alt="Air Conditioner Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-sm font-medium rounded-full">Emergency</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Air Conditioner Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cooling issues, thermostat problems, gas refill, compressor repair</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $99</span>
+                            <span class="text-sm text-gray-500">⚡ 1hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Smart TV Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="electronics">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&q=80" alt="Smart TV Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart TV Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Screen issues, sound problems, smart features, power supply repair</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $69</span>
+                            <span class="text-sm text-gray-500">⚡ 3hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Microwave Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Microwave Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Microwave Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Heating issues, turntable problems, door latch, magnetron replacement</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $59</span>
+                            <span class="text-sm text-gray-500">⚡ 3hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Dishwasher Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://lasvegasappliancemaster.com/wp-content/uploads/2023/12/Dishwasher-Repair-scaled.jpeg" alt="Dishwasher Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dishwasher Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cleaning issues, drainage problems, spray arm repair, leak fix</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $79</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Oven Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400&q=80" alt="Oven Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Oven Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Heating element, thermostat issues, door seal, control panel repair</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $89</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Dryer Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="laundry">
+                    <div class="relative h-48">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.Klo-WdItdC23uc2e4kNGtwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Dryer Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dryer Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Heating issues, drum problems, belt replacement, thermostat repair</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $79</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Small Appliance Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="small">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80" alt="Small Appliance Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Small Appliance Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Blenders, toasters, coffee makers, food processors, and more</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $49</span>
+                            <span class="text-sm text-gray-500">⚡ 4hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Water Heater Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.byRhUoZh0MYvpn97fMemDwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Water Heater Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-sm font-medium rounded-full">Emergency</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Water Heater Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Heating element, thermostat, tank leaks, pilot light issues</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $129</span>
+                            <span class="text-sm text-gray-500">⚡ 1hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Computer Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="electronics">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&q=80" alt="Computer Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Computer Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Hardware upgrades, virus removal, data recovery</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $89</span>
+                            <span class="text-sm text-gray-500">⚡ 3hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+                <!-- Garbage Disposal Repair -->
+                <div class="service-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-48">
+                        <img src="https://www.housedigest.com/img/gallery/the-best-way-to-repair-a-broken-garbage-disposal/l-intro-1657970322.jpg" alt="Garbage Disposal Repair" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Garbage Disposal Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Jam removal, motor repair, blade replacement, leak fix</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-blue-600 dark:text-blue-400 font-bold">From $69</span>
+                            <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                        </div>
+                        <button class="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">Book Service</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Don't See Your Service?</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-8">We repair all major appliance brands. Contact us for specialized services.</p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Contact Us
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by footer.js -->
+    
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-blue-600', 'text-white');
+                btn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                serviceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        card.classList.add('animate-fade-in');
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('animate-fade-in');
+                    }
+                });
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('service-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                serviceCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                        card.classList.add('animate-fade-in');
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('animate-fade-in');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

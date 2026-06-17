@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Pro - Smart Repair Solutions</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Enterprise-grade appliance repair solutions for businesses and homeowners nationwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            green: '#16a34a',
+                            orange: '#f97316',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar will be injected by navbar.js -->
+    
+    <!-- Split Hero Section -->
+    <section class="min-h-screen flex items-center bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Enterprise Solutions</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6 leading-tight">
+                        Smart Repair<br>
+                        <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Solutions</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
+                        Comprehensive appliance repair and maintenance services designed for modern homes and businesses. Certified technicians, real-time tracking, and guaranteed satisfaction.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center">
+                            Get Started
+                        </a>
+                        <a href="services.html" class="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 text-center">
+                            Explore Services
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">500+</div>
+                            <div class="text-sm text-gray-500">Technicians</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">50K+</div>
+                            <div class="text-sm text-gray-500">Repairs</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">98%</div>
+                            <div class="text-sm text-gray-500">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative animate-slide-in">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Smart Home Technology" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-8 -left-8 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Service Complete</div>
+                                <div class="text-sm text-gray-500">Refrigerator repaired in 45 mins</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Repair Solutions -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Solutions</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Smart Repair Solutions</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Advanced diagnostic tools and expert technicians working together to deliver exceptional repair services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI-Powered Diagnostics</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Smart error code analysis and automated troubleshooting to identify issues quickly and accurately.</p>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Track your technician's location and arrival time with live GPS tracking updates.</p>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Secure Payments</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Safe and secure online payments with multiple payment options and digital receipts.</p>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Digital Service Records</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Complete service history and warranty information stored securely in your account.</p>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Round-the-clock customer support with emergency repair services available anytime.</p>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quality Guarantee</h3>
+                    <p class="text-gray-600 dark:text-gray-400">90-day warranty on all repairs with parts and labor coverage for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Network Coverage -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80" alt="Service Network" class="rounded-2xl shadow-2xl">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600 dark:text-blue-400">50</div>
+                            <div class="text-sm text-gray-500">States Covered</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Coverage</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Nationwide Service Network</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Our extensive network of certified technicians ensures that quality appliance repair services are available wherever you are in the country.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Local Technicians</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Certified professionals in your area with local knowledge and quick response times.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Same-Day Service</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Emergency repair services available with same-day appointments in most areas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Consistent Quality</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Same high-quality service standards across all locations with guaranteed satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technician Showcase -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Team</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Expert Technicians</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Meet some of our certified professionals who deliver exceptional service every day.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="Technician" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-bold text-lg">James Wilson</h3>
+                    <p class="text-blue-600 dark:text-blue-400 text-sm mb-2">Senior Technician</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">15+ years experience</p>
+                </div>
+                
+                <div class="glass-card p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" alt="Technician" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-bold text-lg">Sarah Martinez</h3>
+                    <p class="text-blue-600 dark:text-blue-400 text-sm mb-2">Lead Technician</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">12+ years experience</p>
+                </div>
+                
+                <div class="glass-card p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Technician" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-bold text-lg">Michael Chen</h3>
+                    <p class="text-blue-600 dark:text-blue-400 text-sm mb-2">Specialist</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">10+ years experience</p>
+                </div>
+                
+                <div class="glass-card p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Technician" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="font-bold text-lg">Emily Davis</h3>
+                    <p class="text-blue-600 dark:text-blue-400 text-sm mb-2">Technician</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">8+ years experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Support -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-12 text-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Emergency Repair Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">Appliance breakdown can happen anytime. Our emergency team is available 24/7 to handle urgent repairs with priority response.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                        Call Emergency Line
+                    </a>
+                    <a href="services.html" class="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Reviews</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Customer Reviews</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">What our customers say about our services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"Professional service from start to finish. The technician was knowledgeable and fixed the issue quickly."</p>
+                    <div class="font-semibold">Robert Thompson</div>
+                    <div class="text-sm text-gray-500">Business Owner</div>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"The real-time tracking feature is incredible. I knew exactly when the technician would arrive. Great service!"</p>
+                    <div class="font-semibold">Lisa Anderson</div>
+                    <div class="text-sm text-gray-500">Homeowner</div>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"Excellent customer service and transparent pricing. No hidden fees, just honest work. Highly recommend!"</p>
+                    <div class="font-semibold">David Kim</div>
+                    <div class="text-sm text-gray-500">Property Manager</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Plans -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Plans</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Service Plans</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Choose the right maintenance plan for your needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold mb-2">Basic Care</h3>
+                    <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$49<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Annual checkup</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority scheduling</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10% discount on repairs</li>
+                    </ul>
+                    <a href="plans.html" class="block w-full px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg font-semibold text-center hover:bg-blue-600 hover:text-white transition-all">Learn More</a>
+                </div>
+                
+                <div class="glass-card p-8 border-2 border-blue-600 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
+                    <h3 class="text-2xl font-bold mb-2">Premium Care</h3>
+                    <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$89<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 Annual checkups</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority scheduling</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20% discount on repairs</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Emergency visits included</li>
+                    </ul>
+                    <a href="plans.html" class="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold text-center hover:bg-blue-700 transition-all">Get Started</a>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold mb-2">Smart Home</h3>
+                    <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-4">$149<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>4 Annual checkups</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>VIP scheduling</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>30% discount on repairs</li>
+                        
+                    </ul>
+                    <a href="plans.html" class="block w-full px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg font-semibold text-center hover:bg-blue-600 hover:text-white transition-all">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Statistics -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div>
+                    <div class="text-5xl font-bold mb-2">50K+</div>
+                    <div class="text-white/80">Repairs Completed</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">500+</div>
+                    <div class="text-white/80">Certified Technicians</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">98%</div>
+                    <div class="text-white/80">Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2">50</div>
+                    <div class="text-white/80">States Covered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by footer.js -->
+    
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>

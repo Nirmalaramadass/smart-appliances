@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Pro - Expert Appliance Repair At Your Fingertips</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Fast diagnostics, certified technicians, real-time tracking and reliable support for all your home appliances.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            green: '#16a34a',
+                            orange: '#f97316',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar will be injected by navbar.js -->
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80" alt="Smart Home Appliances" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-cyan-900/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in">
+                <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
+                    🏆 #1 Rated Appliance Repair Service
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Expert Appliance Repair<br>
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">At Your Fingertips</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    Fast diagnostics, certified technicians, real-time tracking and reliable support for all your home appliances.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                        Book Emergency Repair
+                    </a>
+                    <a href="diagnostics.html" class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-semibold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30">
+                        Diagnose Appliance Issue
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Stats Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white"><span class="counter" data-target="50000">0</span>+</div>
+                    <div class="text-gray-300 mt-2">Repairs Completed</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white"><span class="counter" data-target="500">0</span>+</div>
+                    <div class="text-gray-300 mt-2">Certified Technicians</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white"><span class="counter" data-target="98">0</span>+</div>
+                    <div class="text-gray-300 mt-2">% Satisfaction Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white"><span class="counter" data-target="24">0</span>+</div>
+                    <div class="text-gray-300 mt-2">/7 Support Available</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Popular Repair Services -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Services</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Popular Repair Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Expert repair services for all major appliance brands with fast response times and guaranteed satisfaction.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group glass-card p-6 cursor-pointer">
+                    <div class="relative h-48 mb-4 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="Refrigerator Repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold">Refrigerator</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Refrigerator Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cooling issues, ice maker problems, compressor repair</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 dark:text-blue-400 font-semibold">From $89</span>
+                        <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group glass-card p-6 cursor-pointer">
+                    <div class="relative h-48 mb-4 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Washing Machine Repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold">Washing Machine</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Washing Machine Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Drainage problems, motor repair</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 dark:text-blue-400 font-semibold">From $79</span>
+                        <span class="text-sm text-gray-500">⚡ 2hr response</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group glass-card p-6 cursor-pointer">
+                    <div class="relative h-48 mb-4 rounded-xl overflow-hidden">
+                        <img src="https://www.ctopreviews.com/wp-content/uploads/2018/08/Portable-Air-Conditioners.jpg" alt="Air Conditioner Repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold">Air Conditioner</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Air Conditioner Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cooling issues, thermostat problems, gas refill</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 dark:text-blue-400 font-semibold">From $99</span>
+                        <span class="text-sm text-gray-500">⚡ 1hr response</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group glass-card p-6 cursor-pointer">
+                    <div class="relative h-48 mb-4 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&q=80" alt="Smart TV Repair" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold">Smart TV</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Smart TV Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Screen issues, sound problems, smart features</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-600 dark:text-blue-400 font-semibold">From $69</span>
+                        <span class="text-sm text-gray-500">⚡ 3hr response</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                    View All Services
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Diagnostics Search -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Smart Diagnostics</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Diagnose Your Appliance Issue</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Enter your appliance error code or describe the issue to get instant troubleshooting guidance and connect with expert technicians.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Enter error code (e.g., E01, F3) or describe issue" class="w-full px-6 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-blue-500 focus:outline-none transition-colors text-lg">
+                            <button class="absolute right-2 top-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                                Search
+                            </button>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm">E01 - Cooling Error</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm">F3 - Sensor Fault</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm">H4 - Heating Issue</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm">LE - Door Lock</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800&q=80" alt="Smart Diagnostics" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Issue Identified</div>
+                                <div class="text-sm text-gray-500">Compressor fault detected</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appliance Categories -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Categories</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Appliance Categories</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Browse our comprehensive range of appliance repair services.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=200&q=80" alt="Refrigerators" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Refrigerators</h3>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&q=80" alt="Washing Machines" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Washing Machines</h3>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://www.ctopreviews.com/wp-content/uploads/2018/08/Portable-Air-Conditioners.jpg" alt="Air Conditioners" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Air Conditioners</h3>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=200&q=80" alt="Smart TVs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Smart TVs</h3>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=200&q=80" alt="Kitchen Appliances" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Kitchen</h3>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="relative h-32 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&q=80" alt="Small Appliances" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/50 transition-colors flex items-center justify-center">
+                            <span class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View All</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-center">Small Appliances</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">The SmartFix Pro Advantage</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Experience the difference with our premium appliance repair service.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fast Response Time</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Average response time under 2 hours for emergency repairs with real-time technician tracking.</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certified Technicians</h3>
+                    <p class="text-gray-600 dark:text-gray-400">All technicians are factory-certified with extensive training on all major appliance brands.</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Transparent Pricing</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Upfront pricing with no hidden fees. Get a quote before any work begins.</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Round-the-clock customer support and emergency repair services available.</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Warranty Guaranteed</h3>
+                    <p class="text-gray-600 dark:text-gray-400">90-day warranty on all repairs with parts and labor coverage included.</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nationwide Coverage</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Service available in all 50 states with local technicians in your area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certified Technicians -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80" alt="Certified Technicians" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -top-6 -right-6 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl p-6 shadow-xl">
+                        <div class="text-4xl font-bold text-white">500+</div>
+                        <div class="text-white/80 text-sm">Certified Pros</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Team</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Meet Our Certified Technicians</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8">Our technicians undergo rigorous training and certification programs to ensure they can handle any appliance repair challenge with expertise and precision.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Factory Certified</div>
+                                <div class="text-sm text-gray-500">Trained by major appliance manufacturers</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Background Checked</div>
+                                <div class="text-sm text-gray-500">All technicians are thoroughly vetted</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Insured & Bonded</div>
+                                <div class="text-sm text-gray-500">Full coverage for your peace of mind</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">What Our Customers Say</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Real reviews from satisfied customers across the country.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"The technician arrived within 2 hours and fixed my refrigerator in under 30 minutes. Incredible service and very professional!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Sarah Johnson</div>
+                            <div class="text-sm text-gray-500">Homeowner, New York</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"Best appliance repair service I've ever used. The real-time tracking feature is amazing - I knew exactly when the technician would arrive."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Michael Chen</div>
+                            <div class="text-sm text-gray-500">Business Owner, California</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">"The smart diagnostics feature helped me identify the issue before the technician even arrived. Saved time and money. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emily Rodriguez" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Emily Rodriguez</div>
+                            <div class="text-sm text-gray-500">Homeowner, Texas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Your Appliance Fixed?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Book a repair today and experience the SmartFix Pro difference. Fast, reliable, and guaranteed.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                    Book Emergency Repair
+                </a>
+                <a href="plans.html" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                    View Maintenance Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by footer.js -->
+    
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter), 1);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
+
+        // Intersection Observer for counters
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>

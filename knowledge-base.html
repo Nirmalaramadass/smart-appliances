@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFix Pro - Appliance Manual Library</title>
+    <meta name="description" content="Access comprehensive appliance manuals, troubleshooting guides, and product documentation for all major brands.">
+        <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            blue: '#2563eb',
+                            cyan: '#06b6d4',
+                            green: '#16a34a',
+                            orange: '#f97316',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar will be injected by navbar.js -->
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-600 to-cyan-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Appliance Manual Library</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Access comprehensive manuals, troubleshooting guides, and product documentation for all major appliance brands.</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="manual-search" placeholder="Search for manuals, guides, or documentation..." class="w-full px-6 py-5 rounded-xl border-0 text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30">
+                    <button id="search-btn" class="absolute right-2 top-2 px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition-all" data-filter="all">All Categories</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="refrigerators">Refrigerators</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="washing">Washing Machines</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="tvs">Smart TVs</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="ac">Air Conditioners</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-600 hover:text-white transition-all" data-filter="kitchen">Kitchen Appliances</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manuals Grid -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="manuals-grid">
+                
+                <!-- Manual Card 1 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="refrigerators">
+                    <div class="relative h-40">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="Samsung Refrigerator Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Samsung Refrigerator User Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Complete user guide for Samsung refrigerators including installation, operation, and troubleshooting.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">2.4 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 2 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="washing">
+                    <div class="relative h-40">
+                        <img src="https://www.lg.com/content/dam/channel/wcms/uk/buying-guides/laundry/wiki/pop-wiki-card17.jpg" alt="LG Washing Machine Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">LG Washing Machine Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Comprehensive guide for LG washing machines with error codes and maintenance tips.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">3.1 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 3 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="tvs">
+                    <div class="relative h-40">
+                        <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&q=80" alt="Sony Smart TV Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Sony Smart TV Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Complete setup and operation guide for Sony Smart TVs with smart features.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">4.2 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 4 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="ac">
+                    <div class="relative h-40">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.fzqb6-32TJcu_YvUOEHDEwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Daikin AC Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Daikin Air Conditioner Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Installation and operation manual for Daikin split and window AC units.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">2.8 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 5 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="kitchen">
+                    <div class="relative h-40">
+                        <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=400&q=80" alt="KitchenAid Mixer Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">KitchenAid Stand Mixer Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">User manual and recipe guide for KitchenAid stand mixers.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">1.9 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 6 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="refrigerators">
+                    <div class="relative h-40">
+                        <img src="https://s1.manualzz.com/image-store/data/6498008-256x256" alt="Whirlpool Refrigerator Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Whirlpool Refrigerator Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Complete guide for Whirlpool refrigerators with troubleshooting section.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">2.6 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 7 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="washing">
+                    <div class="relative h-40">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.AXVbH3thQs-UHuARxU7sfgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bosch Washing Machine Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Bosch Washing Machine Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Detailed manual for Bosch washing machines with error code reference.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">3.5 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manual Card 8 -->
+                <div class="manual-card glass-card overflow-hidden" data-category="tvs">
+                    <div class="relative h-40">
+                        <img src="https://www.lg.com/us/images/MN/features/D03_Triple-52419-D.jpg" alt="LG Smart TV Manual" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">PDF</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">LG Smart TV Manual</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">WebOS smart TV guide with app installation and smart features.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">3.8 MB</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">Brands</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4">Supported Brands</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We provide manuals and documentation for all major appliance brands.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">Samsung</div>
+                </div>
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">LG</div>
+                </div>
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">Whirlpool</div>
+                </div>
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">Bosch</div>
+                </div>
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">Sony</div>
+                </div>
+                <div class="glass-card p-6 text-center hover:scale-105 transition-transform">
+                    <div class="text-2xl font-bold text-gray-700 dark:text-gray-300">Daikin</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-500">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Can't Find Your Manual?</h2>
+            <p class="text-white/90 mb-8">Contact our support team and we'll help you find the documentation you need.</p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Contact Support
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by footer.js -->
+    
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const manualCards = document.querySelectorAll('.manual-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-blue-600', 'text-white');
+                btn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                manualCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        card.classList.add('animate-fade-in');
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('animate-fade-in');
+                    }
+                });
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('manual-search');
+        const searchBtn = document.getElementById('search-btn');
+        
+        const performSearch = () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            manualCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('animate-fade-in');
+                }
+            });
+        };
+        
+        if (searchBtn) {
+            searchBtn.addEventListener('click', performSearch);
+        }
+        
+        if (searchInput) {
+            searchInput.addEventListener('input', performSearch);
+        }
+    </script>
+</body>
+</html>
